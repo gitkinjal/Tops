@@ -1,0 +1,11 @@
+Driver_ID,Driver_Name,Fare,Date,OTP,Available,Journey,Taxi_no
+1,Amit,200,2023-09-09,1025,Y,"Naranpura-Kalupur Railway Station",GJ-01-2258
+2,Ajay,500,2023-09-10,4259,Y,Memnagar-Airport,GJ-18-4532
+3,Amrit,2000,2023-09-10,7250,N,Ahmedabad-Baroda,GJ-01-5213
+4,Dinesh,5000,2023-09-11,1470,Y,Ahmedabad-Rajkot,GJ-03-5555
+5,Binal,150,2023-09-11,2056,N,Airport-Shivranjani,GJ-02-4444
+6,Binita,100,2023-09-11,1723,Y,"Airport-Gift City",GJ-18-4250
+7,Vidita,7000,2023-09-12,4761,Y,Ahmedabad-Mumbai,MH-02-1472
+8,Janmey,200,2023-09-10,2583,Y,Naranpura-Airport,GJ-01-1230
+9,Vimal,500,2023-09-10,4250,Y,"Vile Parle-Sahar Airport",MH-01-7126
+10,Divish,250,2023-09-15,1780,N,Borivali-Malad,MH-02-4520

@@ -163,7 +163,7 @@ letters lowercase, Give each column an appropriate label.*/
 /* Answer Q.2): Write a query that displays the employee's first name and last name along with a " in between for e.g.: first name : Ram; 
 last name : Kumar then Ram-Kumar. Also displays the month on which the employee has joined.  */
 Select concat_ws("-", First_Name,Last_Name) as 'Employee-Name' ,
-Date_Format(Hire_Date,"%b") as 'Joined in Month'
+Month(Hire_Date) as 'Joined in Month'
 from emp
 Where First_Name Like '%a%'
 and Last_Name Like '%a%';
@@ -172,57 +172,144 @@ and Last_Name Like '%a%';
 the salary by 10% else by 11.5% along with the bonus amount of 1500 each. Provide each column an appropriate label.*/
 Select Last_Name,
 Case
-	When Salary > 10000 Then Salary + 0.10
+	When Salary - 0.5 > 10000 Then Salary + 0.10
     Else Salary + 0.115 + 1500
     End As Increment
 From emp;
 
 /* Answer Q.4) : Display the employee ID by Appending two zeros after 2nd digit and 'E' in the end, department id, salary and 
-the manager name all in Upper case, if the Manager name consists of 'z' replace it with '$!   */
-
+the manager name all in Upper case, if the Manager name consists of 'z' replace it with '$! 
+Select 
+    CONCAT(
+        SUBSTRING(EMPLOYEE_ID, 1, 2), 
+        '00',                          
+        SUBSTRING(EMPLOYEE_ID, 3),     
+        'E'                           
+    ) AS Altered Employee_ID,
+    UPPER(DEPARTMENT_ID) AS Altered Department_ID,
+    SALARY,
+    REPLACE(UPPER(FIRST_NAME), 'Z', '$!') AS Altered Manager Name
+FROM
+    emp;*/
 
 /* Answer Q.5) : Write a query that displays the employee's last names with the first letter capitalized and all other letters lowercase, 
 and the length of the names, for all employees whose name starts with J, A, or M. Give each column an appropriate label. Sort the results 
 by the employees' last names.*/
-
-
+Select
+	Concat(
+		Upper(Left(Last_Name,-1)),
+        Lower(Substring(Last_Name,2))
+        ) AS 'Employee Name',
+        Length(Last_Name) As 'Length of Name'
+from emp
+Where 
+	Last_Name Like 'J%' OR
+	Last_Name Like 'A%' OR
+    Last_Name Like 'M%'
+Order By Last_Name;
 
 /* Answer Q.6) : Create a query to display the last name and salary for all employees. Format the salary to be 15 characters long, left-padded with $. 
 Label the column SALARY. */
-
-
+Select Last_Name,
+	   Lpad(Concat('$', Salary), 15, '$') As 'SALARY'
+From emp;
 
 /* Answer Q.7) : Display the employee's name if it is a palindrome.*/
+Select First_Name
+From emp
+Where First_Name = Reverse(First_Name);
 
-
-
-/* Answer Q.8) : Display First names of all employees with initcaps.*/
-
-
+/* Answer Q.8) : Display First names of all employees with initcaps.
+Select Concat(Upper(Substring(First_Name, 1, 1)),
+			  Lower(Substring(First_Name, 2)) As 'Initcaps First Name';*/
 
 /* Answer Q.9) : From LOCATIONS table, extract the word between first and second space from the STREET ADDRESS column.*/
 
 
 
 /* Answer Q.10) : Extract first letter from First Name column and append it with the Last Name. Also add "@systechusa.com" at the end.
-Name the column as e-mail address. All characters should be in lower case. Display this along with their First Name. */
-
-
+Name the column as e-mail address. All characters should be in lower case. Display this along with their First Name.
+Select Concat(Lower(Left(First_Name, 1)),
+			  Lower(Last_Name),
+              '@systechusa.com',
+              ) As 'e-mail address',
+              First_Name
+From emp; */
 
 /* Answer Q.11) : Display the names and job titles of all employees with the same job as Trenna. */
-
+Select concat(First_Name, ' ', Last_Name) as 'Employee Name', Job_ID
+From emp
+Where Job_ID = (Select Job_ID from emp Where First_Name = "Trenna");
 
 /* Answer Q.12) : Display the names and department name of all employees working in the same city as Trenna. */
 
 
 
-
 /* Answer Q.13) : Display the name of the employee whose salary is the lowest.*/
-
-
+Select concat(First_Name, ' ', Last_Name) as 'Employee Name', Salary
+From emp
+Order By Salary
+Limit 1;
 
 /* Answer Q.14) : Display the names of all employees except the lowest paid. */
+Select concat(First_Name, ' ', Last_Name) as 'Employee Name', Salary
+From Emp
+Where Salary > (Select Min(Salary) From Emp);
 
+/*Part-4*/
+
+/* Answer Q.1) : Write a query to display the last name, department number, department name for all employees.*/
+Select Last_Name, Department_ID, DEPARTMENT_NAME From Emp;
+
+/* Answer Q.2) : Create a unique list of all jobs that are in department 4. Include the location of the department in the output.
+Select Distinct Job_ID
+Where Department_ID = "4"
+From Emp;*/
+
+/* Answer Q.3) : Write a query to display the employee last name,department name,location id and city of all employees who earn commission.*/
+Select Last_Name, Department_Name, Location
+From Emp
+Where Commission_Pct Is Not Null;
+
+/* Answer Q.4) : Display the employee last name and department name of all employees who have an 'a' in their last name  .*/
+Select Last_Name, Department_Name
+From Emp
+Where Last_Name Like 'a%';
+
+/* Answer Q.5) : Write a query to display the last name,job,department number and department name for all employees who work in ATLANTA. */
+Select Last_Name, Department_ID, Department_Name
+From Emp
+Where Location = 'ATLANTA';
+
+/* Answer Q.6) : Display the employee last name and employee number along with their manager's last name and manager number.  */
+Select Employee_ID, Last_Name, Manager_ID
+From Emp
+Where Employee_ID = Manager_ID
+Order By Manager_ID;
+
+/* Answer Q.7) : Display the employee last name and employee number along with their manager's last name and manager number 
+(including the employees who have no manager).*/
+
+
+/* Answer Q.8) : Create a query that displays employees last name,department number,and all the employees who work in the same 
+department as a given employee.*/
+Select Last_Name, Department_ID, Department_Name
+From Emp
+Order By Department_Name;
+
+/* Answer Q.9) : Create a query that displays the name,job,department name,salary,grade for all employees.  Derive grade based on 
+salary(>=50000=A, >=30000=B,<30000=C) .*/
+Select concat(First_Name, ' ', Last_Name) as 'Employee Name', Job_ID, Department_Name, Salary,
+Case
+	When Salary >=50000 Then 'A'
+    When Salary >=30000 Then 'B'
+    Else 'C'
+    End As Grade
+From Emp;
+
+/* Answer Q.10) : Display the names and hire date for all employees who were hired before their managers along with
+ their manager names and hire date. Label the columns as Employee name, emp_hire_date,manager name,man_hire_date.*/
+ 
 
 
 

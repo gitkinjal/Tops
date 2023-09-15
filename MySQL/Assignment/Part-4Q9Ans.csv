@@ -1,0 +1,53 @@
+"Employee Name",Job_ID,Department_Name,Salary,Grade
+"Donald OConnell",SH_CLERK,Statistics,2600,C
+"Douglas Grant",SH_CLERK,Statistics,2600,C
+"Jennifer Whalen",AD_ASST,Statistics,4400,C
+"Michael Hartstein",MK_MAN,"MySQL ",13000,C
+"Pat Fay",MK_REP,"MySQL ",6000,C
+"Susan Mavris",HR_REP,"MySQL ",6500,C
+"Hermann Baer",PR_REP,"MySQL ",10000,C
+"Shelley Higgins",AC_MGR,"MySQL ",12008,C
+"William Gietz",AC_ACCOUNT,"Data Analytics",8300,C
+"Neena Kochhar",AD_VP,"Data Analytics",17000,C
+"Lex De Haan",AD_VP,"Data Analytics",17000,C
+"Alexander Hunold",IT_PROG,"Data Analytics",9000,C
+"Bruce Ernst",IT_PROG,"Data Analytics",6000,C
+"David Austin",IT_PROG,Python,4800,C
+"Valli Pataballa",IT_PROG,Python,4800,C
+"Diana Lorentz",IT_PROG,Python,4200,C
+"Nancy Greenberg",FI_MGR,Python,12008,C
+"Daniel Faviet",FI_ACCOUNT,Python,9000,C
+"John Chen",FI_ACCOUNT,Python,8200,C
+"Ismael Sciarra",FI_ACCOUNT,Excel,7700,C
+"Jose Manuel Urman",FI_ACCOUNT,Excel,7800,C
+"Luis Popp",FI_ACCOUNT,Excel,6900,C
+"Den Raphaely",PU_MAN,Excel,11000,C
+"Alexander Khoo",PU_CLERK,Excel,3100,C
+"Shelli Baida",PU_CLERK,Excel,2900,C
+"Sigal Tobias",PU_CLERK,Excel,2800,C
+"Guy Himuro",PU_CLERK,Excel,2600,C
+"Karen Colmenares",PU_CLERK,Excel,2500,C
+"Matthew Weiss",ST_MAN,Excel,8000,C
+"Adam Fripp",ST_MAN,Excel,8200,C
+"Payam Kaufling",ST_MAN,Excel,7900,C
+"Shanta Vollman",ST_MAN,Excel,6500,C
+"Kevin Mourgos",ST_MAN,Excel,5800,C
+"Julia Nayer",ST_CLERK,Excel,3200,C
+"Irene Mikkilineni",ST_CLERK,Excel,2700,C
+"James Landry",ST_CLERK,Excel,2400,C
+"Steven Markle",ST_CLERK,Excel,2200,C
+"Laura Bissot",ST_CLERK,Excel,3300,C
+"Mozhe Atkinson",ST_CLERK,Excel,2800,C
+"James Marlow",ST_CLERK,Excel,2500,C
+"TJ Olson",ST_CLERK,Excel,2100,C
+"Jason Mallin",ST_CLERK,Excel,3300,C
+"Michael Rogers",ST_CLERK,Php,2900,C
+"Ki Gee",ST_CLERK,Java,2400,C
+"Hazel Philtanker",ST_CLERK,Java,2200,C
+"Renske Ladwig",ST_CLERK,"JavaScript ",3600,C
+"Stephen Stiles",ST_CLERK,"tableau ",3200,C
+"John Seo",ST_CLERK,"Data Science ",2700,C
+"Joshua Patel",ST_CLERK,"Data Science ",2500,C
+"Doglas Desai",SL_RP,"Data Science ",3000,C
+"Bhana Nanavati",SL_RP,"Data Science ",3500,C
+"Jonas Vohra",SL_RP,"Data Science ",4000,C

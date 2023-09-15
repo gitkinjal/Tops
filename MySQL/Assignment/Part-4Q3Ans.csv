@@ -1,0 +1,53 @@
+Last_Name,Department_Name,Location
+OConnell,Statistics,"New York"
+Grant,Statistics,Milwaukee
+Whalen,Statistics,Milwaukee
+Hartstein,"MySQL ",Atlanta
+Fay,"MySQL ",Atlanta
+Mavris,"MySQL ",Atlanta
+Baer,"MySQL ",Atlanta
+Higgins,"MySQL ",Atlanta
+Gietz,"Data Analytics",Portland
+Kochhar,"Data Analytics",Portland
+"De Haan","Data Analytics",Portland
+Hunold,"Data Analytics",Portland
+Ernst,"Data Analytics",Portland
+Austin,Python,"San Fransico"
+Pataballa,Python,"San Fransico"
+Lorentz,Python,"San Fransico"
+Greenberg,Python,"San Fransico"
+Faviet,Python,"San Fransico"
+Chen,Python,"San Fransico"
+Sciarra,Excel,Milwaukee
+Urman,Excel,Milwaukee
+Popp,Excel,Milwaukee
+Raphaely,Excel,Milwaukee
+Khoo,Excel,Milwaukee
+Baida,Excel,Milwaukee
+Tobias,Excel,Milwaukee
+Himuro,Excel,"New York"
+Colmenares,Excel,"New York"
+Weiss,Excel,"New York"
+Fripp,Excel,"New York"
+Kaufling,Excel,"New York"
+Vollman,Excel,"New York"
+Mourgos,Excel,"New York"
+Nayer,Excel,"New York"
+Mikkilineni,Excel,"New York"
+Landry,Excel,Milwaukee
+Markle,Excel,Milwaukee
+Bissot,Excel,Milwaukee
+Atkinson,Excel,Milwaukee
+Marlow,Excel,Milwaukee
+Olson,Excel,"New York"
+Mallin,Excel,"New York"
+Rogers,Php,"New York"
+Gee,Java,Orlando
+Philtanker,Java,Orlando
+Ladwig,"JavaScript ",Boston
+Stiles,"tableau ",Boston
+Seo,"Data Science ",Denver
+Patel,"Data Science ",Denver
+Desai,"Data Science ",Raleigh
+Nanavati,"Data Science ",Raleigh
+Vohra,"Data Science ",Raleigh
